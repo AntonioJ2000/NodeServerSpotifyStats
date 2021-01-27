@@ -8,7 +8,7 @@ var
   CryptoJS = require('crypto-js');
  
 var app = express();
-dotenv.load();
+dotenv.config();
  
 const API_URL = "https://accounts.spotify.com/api/token";
 const CLIENT_ID = process.env.CLIENT_ID;
