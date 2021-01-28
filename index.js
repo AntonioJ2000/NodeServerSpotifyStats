@@ -29,7 +29,8 @@ const spotifyRequest = params => {
         request.post(API_URL, {
           form: params,
           headers: {
-            "Authorization": "Bearer " + new Buffer.from(CLIENT_ID + ":" + CLIENT_SECRET).toString('base64')
+            'Content-Type' : 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(CLIENT_ID + ':' + CLIENT_SECRET)
           },
           json: true
         }, (err, resp) => err ? reject(err) : resolve(resp));
