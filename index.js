@@ -2,19 +2,18 @@ var
   cors = require('cors'),
   http = require('http'),
   express = require('express'),
-  dotenv = require('dotenv'),
+  dotenv = require('dotenv').config({path:".env"}),
   bodyParser = require('body-parser'),
   request = require('request'),
   CryptoJS = require('crypto-js');
- 
+
 var app = express();
-dotenv.load();
- 
+
 const API_URL = "https://accounts.spotify.com/api/token";
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const CLIENT_CALLBACK_URL = process.env.CLIENT_CALLBACK_URL;
-const ENCRYPTION_SECRET = process.env.ENCRYPTION_SECRET;
+const CLIENT_ID = "6c3f918a4ab240db97b1c104475c8ea6";
+const CLIENT_SECRET = "5447cf73ef4e46a196c2fdb21d72562b";
+const CLIENT_CALLBACK_URL = "ajsstats://callback";
+const ENCRYPTION_SECRET = "sstats-key";
  
 app.use(bodyParser.urlencoded({
   extended: true
