@@ -29,7 +29,6 @@ const spotifyRequest = params => {
         request.post(API_URL, {
           form: params,
           headers: {
-            'Content-Type' : 'application/x-www-form-urlencoded',
             'Authorization': 'Basic ' + btoa(CLIENT_ID + ':' + CLIENT_SECRET)
           },
           json: true
