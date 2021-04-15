@@ -69,7 +69,7 @@ const spotifyRequest = params => {
         let result = {
           "access_token": session.access_token,
           "expires_in": session.expires_in,
-          "refresh_token2": encrypt(session.refresh_token)
+          "refresh_token": encrypt(session.refresh_token)
         };
         return res.send(result);
       })
