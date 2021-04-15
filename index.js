@@ -29,7 +29,7 @@ const spotifyRequest = params => {
         request.post(API_URL, {
           form: params,
           headers: {
-            'Authorization': 'Basic ' + btoa(CLIENT_ID + ':' + CLIENT_SECRET)
+            'Authorization': 'Basic ' + new Buffer(CLIENT_ID + ':' + CLIENT_SECRET).toString('base64')
           },
           json: true
         }, (err, resp) => err ? reject(err) : resolve(resp));
@@ -74,9 +74,7 @@ const spotifyRequest = params => {
           return res.send(result);
       })
       .catch(response => {
-        return res.json({
-          "FATAL" : "ERROR"
-        });
+        return res.json(response);
       });
   });
    
