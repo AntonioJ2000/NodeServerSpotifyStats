@@ -66,11 +66,13 @@ const spotifyRequest = params => {
         code: params.code
       })
       .then(session => {
-        let result = {
+        let result = code;
+          /*
           "access_token": session.access_token,
           "expires_in": session.expires_in,
           "refresh_token": encrypt(session.refresh_token)
-        };
+          */
+         
         return res.send(result);
       })
       .catch(response => {
