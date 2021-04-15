@@ -12,7 +12,7 @@ var app = express();
 const API_URL = "https://accounts.spotify.com/api/token";
 const CLIENT_ID = "6c3f918a4ab240db97b1c104475c8ea6";
 const CLIENT_SECRET = "5447cf73ef4e46a196c2fdb21d72562b";
-const CLIENT_CALLBACK_URL = "http://localhost:8100/";
+const CLIENT_CALLBACK_URL = "spotifystats://callback";
 const ENCRYPTION_SECRET = "sstats-key";
  
 app.use(bodyParser.urlencoded({
