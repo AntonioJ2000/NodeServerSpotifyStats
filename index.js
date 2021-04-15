@@ -74,8 +74,9 @@ const spotifyRequest = params => {
           return res.send(result);
       })
       .catch(response => {
-        response="dasd";
-        return res.json(response);
+        return res.json({
+          "FATAL" : "ERROR"
+        });
       });
   });
    
