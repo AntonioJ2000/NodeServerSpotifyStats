@@ -76,7 +76,9 @@ const spotifyRequest = params => {
         return res.send(result);
       })
       .catch(response => {
-        return res.json(response);
+        let xx = "hola";
+
+        return res.send(xx);
       });
   });
    
