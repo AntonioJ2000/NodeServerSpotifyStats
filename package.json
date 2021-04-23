@@ -1,12 +1,8 @@
 {
-  "name": "sstats",
+  "name": "ajsstats",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "antonio",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -16,5 +12,10 @@
     "http": "0.0.1-security",
     "request": "^2.88.2"
   },
-  "description": ""
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio",
+  "license": "ISC"
 }

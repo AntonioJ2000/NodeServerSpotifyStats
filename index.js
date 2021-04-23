@@ -2,7 +2,6 @@ var
   cors = require('cors'),
   http = require('http'),
   express = require('express'),
-  dotenv = require('dotenv').config({path:".env"}),
   bodyParser = require('body-parser'),
   request = require('request'),
   CryptoJS = require('crypto-js');
